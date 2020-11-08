@@ -53,12 +53,12 @@ end
 
 def winner?(board)
   win = win?(board)
-  
+
   if win[0] == "X"
     return "X"
   elsif win[0] == "O"
     return "O"
-  end 
+  end
 end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
