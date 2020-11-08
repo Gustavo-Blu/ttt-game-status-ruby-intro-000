@@ -36,7 +36,7 @@ def draw?(board)
     return true
   elsif !won?(board) && !full?(board)
     return false
-  elsif won(board)
+  elsif won?(board) != false
     return false
   else
     return false
@@ -44,11 +44,21 @@ def draw?(board)
 end
 
 def over?(board)
-  if won?(board) || draw?(board) || full?(board)
+  if won?(board) != false || draw?(board) || full?(board)
     return true
   else
     return false
   end
+end
+
+def winner?(board)
+  win = win?(board)
+  
+  if win[0] == "X"
+    return "X"
+  elsif win[0] == "O"
+    return "O"
+  end 
 end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
