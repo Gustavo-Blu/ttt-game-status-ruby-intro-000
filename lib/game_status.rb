@@ -23,6 +23,25 @@ def won?(board)
   end
 end
 
+def full?(board)
+  if board.include(" ", "")
+    return false
+  else
+    return true
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  elsif !won?(board) && !full?(board)
+    return false
+  elsif won(board)
+    return false
+  else
+    return false
+  end
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0, 1, 2]
