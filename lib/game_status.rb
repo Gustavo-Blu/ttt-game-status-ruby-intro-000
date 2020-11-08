@@ -42,6 +42,14 @@ def draw?(board)
     return false
   end
 end
+
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    return true
+  else
+    return false
+  end
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0, 1, 2]
